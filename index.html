@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="./images/favicon.svg">
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -11,8 +12,29 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header calc_width">
+      <h1 class="header__title">&lt/HTML&gt</h1>
+      <p class="header__descr">закрывающий тег</p>
+    </header>
+    <main class="content calc_width">
+      <ul class="content__cards-list">
+        <li class="content__cards-list-item">
+          <article class="card">
+            <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+            <div class="card__image">
+              <img  src="./images/card1image.png" alt="car">
+              <span aria-hidden="true" class="card__label">&lt/HTML&gt</span>
+            </div>
+            <div class="card__paragraphs-wrapper">
+              <p class="card__paragraph">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+              <p class="card__paragraph">Место для ваших воспоминаний о начале обучения.</p>
+            </div>
+            <button class="card__button">like</button>
+          </article>
+        </li>
+      </ul>
+    </main>
+    <button >сохранить на память</button>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

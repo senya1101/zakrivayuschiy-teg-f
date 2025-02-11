@@ -10,7 +10,98 @@
 
 */
 
+.calc_width {
+  inline-size: var(--page-width);
+}
+
 .page {
+  font-family: var(--main-font), sans-serif;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image:var(--page-bg-image);    
+  background-attachment: fixed;
+  max-block-size: min-content;
+  inline-size: var(--page-width);
+  margin: auto;
+}
+
+.header {
+  padding: var(--header-padding);
+  margin-block: var(--header-margin-block);
+  background-color: var(--main-bg-color);
+  font-family: var(--accent-font);
+  border: 2px #000 solid;
+  text-align: center;
+}
+
+.header__title {
+  font-size: var(--header-title-font-size);
+  margin-block-end: var(--header-title-margin-block-end);
+}
+
+.header__descr {
+  font-size: var(--header-descr-font-size);
+  text-transform: uppercase;
+}
+
+.card {
+  background-color: var(--main-bg-color);
+  border: 2px #000 solid;  
+}
+
+.card__title {
+  font-size: var(--card-font-size);
+  font-weight: var(--card-title-font-weight);
+  padding: 5px 10px 3px;
+  line-height: 121%;
+}
+
+.card__paragraphs-wrapper {
+  font-size: var(--card-font-size);
+  font-weight: var(--card-main-font-weight);
+  padding: var(--card-text-padding);
+  
+}
+
+.card__paragraph:not(:last-child) {
+  margin-block-end: var(--card-paragraph-margin-block-end);
+  line-height: 21px;
+}
+
+.card__image {
+  position: relative;
+  border-block: 2px #000 solid; 
+  inline-size: 100%;
+  block-size: var(--page-width);
+}
+
+.card__image img {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.card__label {
+  position: absolute;
+  top: 23px;
+  right: 11px;
+  mix-blend-mode: hard-light;
+  font-family: var(--accent-font), sans-serif;
+  font-weight: var(--card-main-font-weight);
+  font-size: 14px;
+  line-height: 14px;
+  opacity: 0.5;
+  text-shadow: 
+    -1px 0 var(--text-stroke-color), 
+    0 1px var(--text-stroke-color), 
+    1px 0 var(--text-stroke-color), 
+    0 -1px var(--text-stroke-color);
+}
+
+@supports(-webkit-text-stroke: 1px var(--text-stroke-color)){
+  .card__label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-stroke-color)
+  }
 }
