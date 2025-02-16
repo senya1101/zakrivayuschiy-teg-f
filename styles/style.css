@@ -12,6 +12,8 @@
 
 .calc_width {
   inline-size: var(--page-width);
+  min-inline-size: 320px;
+  margin-inline: auto;
 }
 
 .page {
@@ -20,16 +22,15 @@
   min-block-size: 100dvb;
   background-image:var(--page-bg-image);    
   background-attachment: fixed;
-  max-block-size: min-content;
-  inline-size: var(--page-width);
   margin: auto;
+  font-variation-settings: 'wght' var(--main-font-weight),
 }
 
 .header {
   padding: var(--header-padding);
   margin-block: var(--header-margin-block);
   background-color: var(--main-bg-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   border: 2px #000 solid;
   text-align: center;
 }
@@ -44,28 +45,44 @@
   text-transform: uppercase;
 }
 
+
+
 .card {
   background-color: var(--main-bg-color);
-  border: 2px #000 solid;  
+  border: 2px #000 solid;
+  min-inline-size: min-content;
 }
+
+.content__cards-list-item:not(:last-of-type) {
+  margin-block-end: var(--card-margin-block-end);
+}
+
 
 .card__title {
   font-size: var(--card-font-size);
-  font-weight: var(--card-title-font-weight);
-  padding: 5px 10px 3px;
+  font-variation-settings: 'wght' var(--card-title-font-weight);
+  padding: 4px 10px 5px;
   line-height: 121%;
 }
 
-.card__paragraphs-wrapper {
-  font-size: var(--card-font-size);
-  font-weight: var(--card-main-font-weight);
-  padding: var(--card-text-padding);
+.card__content-wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, fit-content);
+  grid-template-columns: 1fr min-content;
+  column-gap: 6px;
+  padding: var(--card-content-padding);
   
 }
 
-.card__paragraph:not(:last-child) {
-  margin-block-end: var(--card-paragraph-margin-block-end);
+.card__paragraph {
+  grid-column: 1/-1;
+  grid-row: span 1;
+  font-size: var(--card-font-size);
   line-height: 21px;
+}
+
+.card__paragraph:not(:last-of-type) {
+  margin-block-end: var(--card-paragraph-margin-block-end);
 }
 
 .card__image {
@@ -88,7 +105,6 @@
   right: 11px;
   mix-blend-mode: hard-light;
   font-family: var(--accent-font), sans-serif;
-  font-weight: var(--card-main-font-weight);
   font-size: 14px;
   line-height: 14px;
   opacity: 0.5;
@@ -105,3 +121,134 @@
     -webkit-text-stroke: 1px var(--text-stroke-color)
   }
 }
+
+
+.button {
+  background-color: transparent;
+  border: 2px #000  solid;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  transition: box-shadow .3s ease; 
+  position: relative;
+  cursor: pointer;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  scale: 0 1;
+  background-color: #000;
+  transition: scale .5s ease-in-out;
+  transform-origin: left;
+}
+
+
+.card__like-button {
+  block-size: 38px;
+  inline-size: 130px;
+  margin-block-start: 25px;
+  text-transform: capitalize;
+}
+
+.card__icon-button {
+  margin-block-start: 31px;
+  justify-self: end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.button-save {
+  inline-size: var(--save-button-inline-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 17px;
+  margin-block: 50px 100px;
+  margin-inline: auto;
+  background-color: var(--main-bg-color);
+}
+
+.button-save  path {
+  inline-size: 28px;
+  fill: #fff;
+  mix-blend-mode: difference;
+}
+
+.dialog__content svg{
+  min-inline-size: 39px;
+  max-block-size: 39px;
+  align-self: center;
+}
+
+#save-dialog[open] {
+  inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  border: 2px #000 solid;
+}
+
+#save-dialog[open] .dialog__content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.dialog__content-text {
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  inline-size: 100%;
+  padding: 12.5px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1440px) {
+
+  .card__label {
+    top: 25px;
+    right: 25px;
+  }
+  .button-save {
+    flex-direction: row;
+  }
+
+  .button-save svg {
+    inline-size: 21px;
+  }
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px #000;
+}
+
+.button:hover::after {    
+  scale: 1 1;
+}
+
+
+
