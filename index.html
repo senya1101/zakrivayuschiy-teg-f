@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg" href="./images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="./svg/favicon.svg">
+    <link rel="apple-touch-icon" href="./images/apple-touch.png">
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -190,20 +191,24 @@
           </article>
         </li>
       </ul>
+    </main>
+    <footer class="footer">
       <button type="button" 
       onclick="window['save-dialog'].showModal()" 
       aria-controls="save-dialog"
       class="button-save button"
       >
-      <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-        <use  href="./images/disketa.svg#disketa"></use>
-      </svg>
-      <span class="button__text">Сохранить на память</span>
+      <span class="button__text button-save__content">
+        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+          <use href="./svg/disketa.svg#disketa"></use>
+        </svg>
+        Сохранить на память</span>
     </button>
+
     <dialog id="save-dialog">
       <div class="dialog__content">
-        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-          <use  href="./images/disketa.svg#disketa"></use>
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+          <use href="./svg/disketa.svg#disketa"></use>
         </svg>
         <p class="dialog__content-text">Вставьте дискету, чтобы продолжить</p>
       </div>
@@ -212,7 +217,7 @@
         <span class="button__text">ок</span>
       </button>
     </dialog>
-    </main>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
