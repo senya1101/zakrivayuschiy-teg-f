@@ -1,12 +1,21 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --main-font: 'Inter-Variable';
-  --accent-font: 'PressStart2P';
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P";
   --page-width: clamp(20rem, 13.2143rem + 33.9286vw, 43.75rem);
   --main-font-color: #000;
-  --page-bg-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px ),
-  repeating-linear-gradient(to bottom, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px ),
-  repeating-linear-gradient(to bottom, #e7e7e7 0.01% , #1a1a1a );;
+  --page-bg-image:
+    repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      rgb(211 211 211 / 0) 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0 2px,
+      rgb(211 211 211 / 0) 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
   --main-bg-color: #fff;
   --card-title-font-weight: 700;
   --main-font-weight: 400;
@@ -14,7 +23,8 @@
   --card-paragraph-margin-block-end: 27px;
   --card-margin-block-end: 50px;
   --card-content-padding: 25px;
-  --header-padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);;
+  --header-padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem)
+    clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
   --header-margin-block: 100px;
   --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --header-title-margin-block-end: 20px;
@@ -23,8 +33,7 @@
   --save-button-inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
 }
 
-
-@media (max-width: 425px ) {
+@media (max-width: 425px) {
   :root {
     --page-width: 100vw;
   }

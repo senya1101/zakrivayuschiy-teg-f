@@ -20,10 +20,10 @@
   font-family: var(--main-font), sans-serif;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image:var(--page-bg-image);    
+  background-image: var(--page-bg-image);
   background-attachment: fixed;
   margin: auto;
-  font-variation-settings: 'wght' var(--main-font-weight),
+  font-variation-settings: "wght" var(--main-font-weight);
 }
 
 .header {
@@ -45,8 +45,6 @@
   text-transform: uppercase;
 }
 
-
-
 .card {
   background-color: var(--main-bg-color);
   border: 2px #000 solid;
@@ -57,10 +55,9 @@
   margin-block-end: var(--card-margin-block-end);
 }
 
-
 .card__title {
   font-size: var(--card-font-size);
-  font-variation-settings: 'wght' var(--card-title-font-weight);
+  font-variation-settings: "wght" var(--card-title-font-weight);
   padding: 4px 10px 5px;
   line-height: 121%;
 }
@@ -71,7 +68,6 @@
   grid-template-columns: 1fr min-content;
   column-gap: 6px;
   padding: var(--card-content-padding);
-  
 }
 
 .card__paragraph {
@@ -87,7 +83,7 @@
 
 .card__image {
   position: relative;
-  border-block: 2px #000 solid; 
+  border-block: 2px #000 solid;
   inline-size: 100%;
   block-size: var(--page-width);
 }
@@ -99,6 +95,42 @@
   object-position: right;
 }
 
+.card__image-filter1 {
+  filter: blur(.2rem) sepia(80%);
+}
+
+
+.card__image-filter2 {
+  filter: opacity(0.2) blur(5px);
+}
+
+.card__image-filter3 {
+  filter: brightness(10) grayscale(1);
+}
+
+.card__image-filter4 {
+  filter: invert(0.8);
+}
+
+.card__image-filter5 {
+  filter: invert(0.8);
+}
+
+
+.card__image-filter6 {
+  filter: invert(0.8);
+}
+
+.card__image-filter7 {
+  filter: invert(0.8);
+}
+
+.card__image-filter8 {
+  filter: opacity(0.9) grayscale(.1);
+}
+
+
+
 .card__label {
   position: absolute;
   top: 23px;
@@ -108,27 +140,26 @@
   font-size: 14px;
   line-height: 14px;
   opacity: 0.5;
-  text-shadow: 
-    -1px 0 var(--text-stroke-color), 
-    0 1px var(--text-stroke-color), 
-    1px 0 var(--text-stroke-color), 
+  text-shadow:
+    -1px 0 var(--text-stroke-color),
+    0 1px var(--text-stroke-color),
+    1px 0 var(--text-stroke-color),
     0 -1px var(--text-stroke-color);
 }
 
-@supports(-webkit-text-stroke: 1px var(--text-stroke-color)){
+@supports (-webkit-text-stroke: 1px var(--text-stroke-color)) {
   .card__label {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--text-stroke-color)
+    -webkit-text-stroke: 1px var(--text-stroke-color);
   }
 }
 
-
 .button {
   background-color: transparent;
-  border: 2px #000  solid;
+  border: 2px #000 solid;
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
-  transition: box-shadow .3s ease; 
+  transition: box-shadow 0.3s ease;
   position: relative;
   cursor: pointer;
 }
@@ -141,16 +172,15 @@
 }
 
 .button::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   scale: 0 1;
   background-color: #000;
-  transition: scale .5s ease-in-out;
+  transition: scale 0.5s ease-in-out;
   transform-origin: left;
   z-index: 0;
 }
-
 
 .card__like-button {
   block-size: 38px;
@@ -167,8 +197,7 @@
   cursor: pointer;
 }
 
-
-.button-save  {
+.button-save {
   display: block;
   inline-size: var(--save-button-inline-size);
   padding: 15px 17px;
@@ -181,26 +210,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
 }
 
-
-.button-save svg {
-  inline-size: 28px;
-  position: relative;
-  mix-blend-mode: difference;
+.button-save-wrapper-svg {
+  margin-inline-start: 10px;
+  inline-size: 40px;
+  block-size: 37px;
   fill: #fff;
+
 }
 
-.dialog__content svg{
-  min-inline-size: 39px;
-  max-block-size: 39px;
+
+.button-save-svg{
+  position: relative;
+  inline-size: 28px;
+  mix-blend-mode: difference;
+}
+
+.dialog__content-svg-wrapper {
+  inline-size: 50px;
+}
+
+.dialog__content-svg {
+  inline-size: 39px;
   align-self: center;
-  fill:#000;
+  fill: #000;
 }
 
 #save-dialog[open] {
-  inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);;
+  inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -210,13 +248,13 @@
 
 #save-dialog::backdrop {
   background-color: #000;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 #save-dialog[open] .dialog__content {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  
 }
 
 .dialog__content-text {
@@ -224,6 +262,7 @@
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
+  display: block;
 }
 
 .dialog__button {
@@ -233,7 +272,6 @@
 }
 
 @media (min-width: 1440px) {
-
   .card__label {
     top: 25px;
     right: 25px;
@@ -241,8 +279,14 @@
   .button-save__content {
     flex-direction: row;
   }
+  
+  .button-save-wrapper-svg {
+      inline-size: 30px;
+      block-size: 21px;
+  }
+  
 
-  .button-save svg {
+  .button-save-svg {
     inline-size: 21px;
   }
 }
@@ -259,9 +303,6 @@
   box-shadow: 2px 2px #000;
 }
 
-.button:hover::after {    
+.button:hover::after {
   scale: 1 1;
 }
-
-
-
