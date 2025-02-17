@@ -62,19 +62,22 @@
   line-height: 121%;
 }
 
-.card__content-wrapper {
-  display: grid;
-  grid-template-rows: repeat(3, fit-content);
-  grid-template-columns: 1fr min-content;
-  column-gap: 6px;
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   padding: var(--card-content-padding);
 }
 
+.card__content-buttons {
+  align-self: end;
+  display: flex;
+  align-items: end;
+  gap: 6px;
+}
 .card__paragraph {
-  grid-column: 1/-1;
-  grid-row: span 1;
-  font-size: var(--card-font-size);
-  line-height: 21px;
+  line-height: 21px;  
+  font-size: var(--card-font-size);   
 }
 
 .card__paragraph:not(:last-of-type) {
@@ -185,16 +188,18 @@
 .card__like-button {
   block-size: 38px;
   inline-size: 130px;
-  margin-block-start: 25px;
   text-transform: capitalize;
 }
 
 .card__icon-button {
-  margin-block-start: 31px;
   justify-self: end;
+  align-self: center;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-block-start: 5px;
+  border: 2px transparent solid;
+  padding-block-start: 5px;
 }
 
 .button-save {
@@ -210,14 +215,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 8px;
 }
 
 .button-save-wrapper-svg {
-  margin-inline-start: 10px;
-  inline-size: 40px;
-  block-size: 37px;
+  inline-size: 28px;
+  block-size: 28px;
   fill: #fff;
-
 }
 
 
@@ -228,7 +232,7 @@
 }
 
 .dialog__content-svg-wrapper {
-  inline-size: 50px;
+  inline-size: 39px;
 }
 
 .dialog__content-svg {
@@ -254,7 +258,8 @@
 #save-dialog[open] .dialog__content {
   display: flex;
   flex-direction: row;
-  
+  align-items: center;
+  gap: 20px;
 }
 
 .dialog__content-text {
@@ -281,7 +286,7 @@
   }
   
   .button-save-wrapper-svg {
-      inline-size: 30px;
+      inline-size: 21px;
       block-size: 21px;
   }
   
@@ -294,6 +299,11 @@
 .card__icon-button:focus {
   outline: none;
 }
+
+.card__icon-button:focus-visible {
+  border-color: #000;
+}
+
 
 .button:focus {
   outline: none;
