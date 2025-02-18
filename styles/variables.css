@@ -23,17 +23,16 @@
   --card-paragraph-margin-block-end: 27px;
   --card-margin-block-end: 50px;
   --card-content-padding: 25px;
-  --header-padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem)
-    clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
+  --header-padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0;
   --header-margin-block: 100px;
   --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --header-title-margin-block-end: 20px;
   --header-descr-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --text-stroke-color: #fff;
   --save-button-inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
-  --heart-main-color: #FF0000;
+  --heart-main-color: #ff0000;
   --heart-contour-color: #000;
-  --heart-sparks-color: rgba(255 0 0 / 0);
+  --heart-sparks-color: #ff0000;
 }
 
 @media (max-width: 425px) {
@@ -42,9 +41,9 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (width < 375px) {
   :root {
-    --header-title-font-size: 30px;
+    --header-title-font-size: clamp(1.875rem, -5.0341rem + 34.5455vw, 3.0625rem);;
     --save-button-inline-size: min-content;
   }
 }

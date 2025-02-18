@@ -10,6 +10,7 @@
 @font-face {
   font-display: swap;
   font-family: "Inter-Variable";
+  font-weight: 400 785;
   src:
     local("Inter-Variable"),
     url(./Inter-Variable.woff2) format("woff2 supports variations"),
