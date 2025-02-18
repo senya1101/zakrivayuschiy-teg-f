@@ -58,8 +58,8 @@
 .card__title {
   font-size: var(--card-font-size);
   font-variation-settings: "wght" var(--card-title-font-weight);
-  padding: 4px 10px 5px;
-  line-height: 121%;
+  padding: 3.5px 10px 5.5px;
+  line-height: 1.21;
 }
 
 .card__content {
@@ -190,18 +190,16 @@
 .card__icon-button {
   justify-self: end;
   background-color: transparent;
-  border: none;
   cursor: pointer;
   border: 2px transparent solid;
   block-size: 38px;
   padding: 0;
 }
 
-
 .button-save {
   display: block;
   inline-size: var(--save-button-inline-size);
-  padding: 15px;
+  padding: 15px 17px;
   margin-block: 50px 100px;
   margin-inline: auto;
   background-color: var(--main-bg-color);
@@ -214,16 +212,10 @@
   gap: 8px;
 }
 
-.button-save-wrapper-svg {
+.button-save__content svg {
   inline-size: 28px;
   block-size: 28px;
   fill: #fff;
-}
-
-.button-save-svg {
-  position: relative;
-  inline-size: 28px;
-  mix-blend-mode: difference;
 }
 
 .dialog__content-svg-wrapper {
@@ -272,6 +264,10 @@
 }
 
 @media (min-width: 1440px) {
+  .card__title {
+    padding: 5px 10px 4px;
+  }
+
   .card__label {
     top: 25px;
     right: 25px;
@@ -280,13 +276,9 @@
     flex-direction: row;
   }
 
-  .button-save-wrapper-svg {
+  .button-save__content svg {
     inline-size: 21px;
     block-size: 21px;
-  }
-
-  .button-save-svg {
-    inline-size: 21px;
   }
 }
 
@@ -317,7 +309,7 @@
 
 .main-body {
   transform-origin: center;
-  transition: fill .3s .05s;
+  transition: fill 0.3s 0.05s;
 }
 
 .like-icon:hover .core {
@@ -336,7 +328,6 @@
   fill: var(--heart-main-color);
 }
 
-
 .like-icon.is-liked .core {
   fill: var(--heart-main-color);
 }
@@ -347,27 +338,27 @@
 
 .contour {
   fill: var(--heart-contour-color);
-  transition: fill .1s linear;
+  transition: fill 0.1s linear;
   transform-origin: center;
 }
 
 .like-icon.is-liked .contour {
-  transition: fill .3s 0.06s;
+  transition: fill 0.3s 0.06s;
 }
 
-.like-icon.is-liked  .core {
+.like-icon.is-liked .core {
   fill: var(--heart-main-color);
-  animation: like-scale .3s ease-in .1s 1;
+  animation: like-scale 0.3s ease-in 0.1s 1;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--heart-main-color);
-  animation: like-scale .3s ease-in .1s 1;
+  animation: like-scale 0.3s ease-in 0.1s 1;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--heart-main-color);
-  animation: like-scale .3s ease-in .1s 1;
+  animation: like-scale 0.3s ease-in 0.1s 1;
 }
 
 .sparks {
@@ -375,9 +366,5 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: like-sparks .3s ease-in .3s 1;
+  animation: like-sparks 0.3s ease-in 0.3s 1;
 }
-
-
-
-

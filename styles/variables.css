@@ -36,14 +36,20 @@
 }
 
 @media (max-width: 425px) {
+
   :root {
     --page-width: 100vw;
   }
 }
 
 @media (width < 375px) {
+  
   :root {
-    --header-title-font-size: clamp(1.875rem, -5.0341rem + 34.5455vw, 3.0625rem);;
+    --header-title-font-size: clamp(
+      1.875rem,
+      -5.0341rem + 34.5455vw,
+      3.0625rem
+    );
     --save-button-inline-size: min-content;
   }
 }
