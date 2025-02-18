@@ -13,25 +13,26 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header calc_width">
+    <header class="header page__container-inline-size">
       <h1 class="header__title">&lt;/HTML&gt;</h1>
       <p class="header__descr">закрывающий тег</p>
     </header>
-    <main class="content calc_width">
+    <main class="content page__container-inline-size">
       <ul class="content__cards-list">
         <li class="content__cards-list-item">
           <article class="card">
             <h2 class="card__title">
               Фритрек и нулевой спринт: Подготовка к работе
             </h2>
-            <div class="card__image">
+            <figure class="card__image-wrapper">
               <img
-                class="card__image-filter1"
+                loading="lazy"
+                class="card__image filter-blur filter-sepia"
                 src="./images/cardimage.png"
-                alt="car"
+                alt="Машина стоит у гор"
               />
               <span aria-hidden="true" class="card__label">&lt;/HTML&gt;</span>
-            </div>
+            </figure>
             <div class="card__content">
               <div class="card__content-text">
                 <p class="card__paragraph">
@@ -44,7 +45,7 @@
                 </p>
               </div>
               <div class="card__content-buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     class="like-icon"
                     width="39"
@@ -79,7 +80,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="card__like-button button">
+                <button type="button" class="card__like-button button">
                   <span class="button__text">like</span>
                 </button>
               </div>
@@ -89,14 +90,15 @@
         <li class="content__cards-list-item">
           <article class="card">
             <h2 class="card__title">1 спринт: Я — чистый лист</h2>
-            <div class="card__image">
+            <figure class="card__image-wrapper">
               <img
-                class="card__image-filter2"
+                loading="lazy"
+                class="card__image filter-opacity filter-blur"
                 src="./images/cardimage.png"
-                alt="car"
+                alt="Машина стоит у гор"
               />
               <span aria-hidden="true" class="card__label">&lt;/HTML&gt;</span>
-            </div>
+            </figure>
             <div class="card__content">
               <div class="card__content-text">
                 <p class="card__paragraph">
@@ -113,7 +115,7 @@
               </div>
 
               <div class="card__content-buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     class="like-icon"
                     width="39"
@@ -148,7 +150,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="card__like-button button">
+                <button type="button" class="card__like-button button">
                   <span class="button__text">like</span>
                 </button>
               </div>
@@ -158,14 +160,15 @@
         <li class="content__cards-list-item">
           <article class="card">
             <h2 class="card__title">1 спринт: А если не получится?</h2>
-            <div class="card__image">
+            <figure class="card__image-wrapper">
               <img
-                class="card__image-filter3"
+                loading="lazy"
+                class="card__image filter-brightness filter-grayscale"
                 src="./images/cardimage.png"
-                alt="car"
+                alt="Машина стоит у гор"
               />
               <span aria-hidden="true" class="card__label">&lt;CSS&gt;</span>
-            </div>
+            </figure>
             <div class="card__content">
               <div class="card__content-text">
                 <p class="card__paragraph">
@@ -179,7 +182,7 @@
                 </p>
               </div>
               <div class="card__content-buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     class="like-icon"
                     width="39"
@@ -214,7 +217,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="card__like-button button">
+                <button type="button" class="card__like-button button">
                   <span class="button__text">like</span>
                 </button>
               </div>
@@ -224,16 +227,17 @@
         <li class="content__cards-list-item">
           <article class="card">
             <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
-            <div class="card__image">
+            <figure class="card__image-wrapper">
               <img
-                class="card__image-filter4"
+                loading="lazy"
+                class="card__image filter-hue-rotate filter-invert"
                 src="./images/cardimage.png"
-                alt="car"
+                alt="Машина стоит у гор"
               />
               <span aria-hidden="true" class="card__label"
                 >&lt;desigions&gt;</span
               >
-            </div>
+            </figure>
             <div class="card__content">
               <div class="card__content-text">
                 <p class="card__paragraph">
@@ -248,7 +252,7 @@
                 </p>
               </div>
               <div class="card__content-buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     class="like-icon"
                     width="39"
@@ -283,7 +287,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="card__like-button button">
+                <button type="button" class="card__like-button button">
                   <span class="button__text">like</span>
                 </button>
               </div>
@@ -293,14 +297,15 @@
         <li class="content__cards-list-item">
           <article class="card">
             <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
-            <div class="card__image">
+            <figure class="card__image-wrapper">
               <img
-                class="card__image-filter5"
+                loading="lazy"
+                class="card__image filter-invert filter-saturate"
                 src="./images/cardimage.png"
-                alt="car"
+                alt="Машина стоит у гор"
               />
               <span aria-hidden="true" class="card__label">care</span>
-            </div>
+            </figure>
             <div class="card__content">
               <div class="card__content-text">
                 <p class="card__paragraph">
@@ -316,7 +321,7 @@
                 </p>
               </div>
               <div class="card__content-buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     class="like-icon"
                     width="39"
@@ -351,7 +356,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="card__like-button button">
+                <button type="button" class="card__like-button button">
                   <span class="button__text">like</span>
                 </button>
               </div>
@@ -361,16 +366,17 @@
         <li class="content__cards-list-item">
           <article class="card">
             <h2 class="card__title">3 спринт: Обходные стратегии</h2>
-            <div class="card__image">
+            <figure class="card__image-wrapper">
               <img
-                class="card__image-filter6"
+                loading="lazy"
+                class="card__image filter-hue-rotate"
                 src="./images/cardimage.png"
-                alt="car"
+                alt="Машина стоит у гор"
               />
               <span aria-hidden="true" class="card__label"
                 >&lt;support&gt;</span
               >
-            </div>
+            </figure>
             <div class="card__content">
               <div class="card__content-text">
                 <p class="card__paragraph">
@@ -384,7 +390,7 @@
               </div>
 
               <div class="card__content-buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     class="like-icon"
                     width="39"
@@ -419,7 +425,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="card__like-button button">
+                <button type="button" class="card__like-button button">
                   <span class="button__text">like</span>
                 </button>
               </div>
@@ -429,16 +435,17 @@
         <li class="content__cards-list-item">
           <article class="card">
             <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
-            <div class="card__image">
+            <figure class="card__image-wrapper">
               <img
-                class="card__image-filter7"
+                loading="lazy"
+                class="card__image filter-invert filter-sepia"
                 src="./images/cardimage.png"
-                alt="car"
+                alt="Машина стоит у гор"
               />
               <span aria-hidden="true" class="card__label"
                 >&lt;lifes-style: none;&gt;</span
               >
-            </div>
+            </figure>
             <div class="card__content">
               <div class="card__content-text">
                 <p class="card__paragraph">
@@ -454,7 +461,7 @@
               </div>
 
               <div class="card__content-buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     class="like-icon"
                     width="39"
@@ -489,7 +496,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="card__like-button button">
+                <button type="button" class="card__like-button button">
                   <span class="button__text">like</span>
                 </button>
               </div>
@@ -499,16 +506,17 @@
         <li class="content__cards-list-item">
           <article class="card">
             <h2 class="card__title">«Сейчас я здесь»</h2>
-            <div class="card__image">
+            <figure class="card__image-wrapper">
               <img
-                class="card__image-filter8"
+                loading="lazy"
+                class="card__image filter-opacity filter-grayscale"
                 src="./images/cardimage.png"
-                alt="car"
+                alt="Машина стоит у гор"
               />
               <span aria-hidden="true" class="card__label"
                 >&lt;experience&gt;</span
               >
-            </div>
+            </figure>
             <div class="card__content">
               <div class="card__content-text">
                 <p class="card__paragraph">
@@ -527,7 +535,7 @@
               </div>
 
               <div class="card__content-buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg
                     class="like-icon"
                     width="39"
@@ -562,7 +570,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="card__like-button button">
+                <button type="button" class="card__like-button button">
                   <span class="button__text">like</span>
                 </button>
               </div>
@@ -570,8 +578,6 @@
           </article>
         </li>
       </ul>
-    </main>
-    <footer class="footer">
       <button
         type="button"
         onclick="window['save-dialog'].showModal()"
@@ -586,7 +592,7 @@
         </span>
       </button>
 
-      <dialog id="save-dialog">
+      <dialog id="save-dialog" class="dialog__save">
         <div class="dialog__content">
           <div class="dialog__content-svg-wrapper">
             <svg
@@ -607,13 +613,15 @@
         </div>
 
         <button
+          type="button"
           onclick="window['save-dialog'].close()"
           class="button dialog__button"
         >
           <span class="button__text">ок</span>
         </button>
       </dialog>
-    </footer>
+    </main>
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>

@@ -10,7 +10,7 @@
 
 */
 
-.calc_width {
+.page__container-inline-size {
   inline-size: var(--page-width);
   min-inline-size: 320px;
   margin-inline: auto;
@@ -36,6 +36,7 @@
 }
 
 .header__title {
+  text-transform: uppercase;
   font-size: var(--header-title-font-size);
   margin-block-end: var(--header-title-margin-block-end);
 }
@@ -84,50 +85,50 @@
   margin-block-end: var(--card-paragraph-margin-block-end);
 }
 
-.card__image {
+.card__image-wrapper {
   position: relative;
   border-block: 2px #000 solid;
   inline-size: 100%;
   block-size: var(--page-width);
 }
 
-.card__image img {
+.card__image {
   block-size: 100%;
   inline-size: 100%;
   object-fit: cover;
   object-position: right;
 }
 
-.card__image-filter1 {
-  filter: blur(0.2rem) sepia(80%);
+.filter-sepia {
+  filter: sepia(80%);
 }
 
-.card__image-filter2 {
-  filter: opacity(0.2) blur(5px);
+.filter-blur {
+  filter: blur(0.2rem);
 }
 
-.card__image-filter3 {
-  filter: brightness(10) grayscale(1);
+.filter-opacity {
+  filter: opacity(0.2);
 }
 
-.card__image-filter4 {
-  filter: hue-rotate(30deg) invert(0.8);
+.filter-brightness {
+  filter: brightness(10);
 }
 
-.card__image-filter5 {
-  filter: invert(0.8) saturate(160%);
+.filter-grayscale {
+  filter: grayscale(1);
 }
 
-.card__image-filter6 {
-  filter: hue-rotate(300deg);
+.filter-invert {
+  filter: invert(0.8);
 }
 
-.card__image-filter7 {
-  filter: invert(0.8) sepia(48%);
+.filter-hue-rotate {
+  filter: hue-rotate(30deg);
 }
 
-.card__image-filter8 {
-  filter: opacity(0.3) grayscale(0.9);
+.filter-saturate {
+  filter: saturate(160%);
 }
 
 .card__label {
@@ -157,6 +158,7 @@
   background-color: transparent;
   border: 2px #000 solid;
   font-family: var(--accent-font), sans-serif;
+  background-color: var(--main-bg-color);
   font-size: 14px;
   transition: box-shadow 0.3s ease;
   position: relative;
@@ -182,8 +184,8 @@
 }
 
 .card__like-button {
-  block-size: 38px;
-  inline-size: 130px;
+  min-block-size: 38px;
+  min-inline-size: 130px;
   text-transform: capitalize;
 }
 
@@ -194,6 +196,7 @@
   border: 2px transparent solid;
   block-size: 38px;
   padding: 0;
+  transition: border-color 0.3s ease;
 }
 
 .button-save {
@@ -202,7 +205,6 @@
   padding: 15px 17px;
   margin-block: 50px 100px;
   margin-inline: auto;
-  background-color: var(--main-bg-color);
 }
 
 .button-save__content {
@@ -228,21 +230,24 @@
   fill: #000;
 }
 
-#save-dialog[open] {
+.dialog__save {
   inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
-  display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 30px;
   border: 2px #000 solid;
 }
 
-#save-dialog::backdrop {
+.dialog__save[open] {
+  display: flex;
+}
+
+.dialog__save::backdrop {
   background-color: #000;
   opacity: 0.75;
 }
 
-#save-dialog[open] .dialog__content {
+.dialog__content {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -303,54 +308,59 @@
 }
 
 .core {
-  transition: fill 0.3s 0s;
+  fill: transparent;
+  transition: fill 0.3s 0.03s;
 }
 
 .main-body {
-  transition: fill 0.3s 0.05s;
+  fill: transparent;
+  transition: fill 0.3s 0s;
 }
 
 .like-icon:hover .core {
   fill: var(--heart-contour-color);
-  transition-delay: .03s;
+  transition: fill 0.3s 0s;
 }
 
 .like-icon:hover .main-body {
   fill: var(--heart-contour-color);
-  transition-delay: 0s;
+  transition: fill 0.3s 0.05s;
 }
 
-.like-icon:active .core, 
+.like-icon:active .core {
+  fill: var(--heart-main-color);
+  transition: fill 0.3s 0s;
+}
+
 .like-icon:active .main-body {
   fill: var(--heart-main-color);
+  transition: fill 0.3s 0.05s;
 }
-
 
 .like-icon.is-liked .core {
+  transition: fill 0.3s 0s;
   fill: var(--heart-main-color);
 }
 
-.card__icon-button.is-liked .main-body {
+.like-icon.is-liked .main-body {
+  transition: fill 0.3s 0.05s;
   fill: var(--heart-main-color);
+}
+
+.heart {
+  transform-origin: center;
+  animation: like-scale-up 0.3s ease-in 0.1s 1;
 }
 
 .contour {
   fill: var(--heart-contour-color);
-  transition: fill .1s linear;
+  transition: fill 0.1s linear;
 }
 
 .like-icon.is-liked .contour {
   transition: fill 0.3s 0.06s;
   fill: var(--heart-main-color);
-  animation: like-scale 0.3s ease-in 0.1s 1;
   transform-origin: center;
-}
-
-.like-icon.is-liked .core, 
-.like-icon.is-liked .main-body {
-  fill: var(--heart-main-color);
-  transform-origin: center;
-  animation: like-scale 0.3s ease-in 0.1s 1;
 }
 
 .sparks {
@@ -358,5 +368,5 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: like-sparks 0.3s ease-in 0.3s 1;
+  animation: sparks-fade-in 0.3s ease-in 0.3s 1;
 }

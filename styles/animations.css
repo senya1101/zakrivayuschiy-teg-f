@@ -9,7 +9,7 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-@keyframes like-scale {
+@keyframes like-scale-up {
   from {
     transform: scale(1);
   }
@@ -18,7 +18,7 @@
   }
 }
 
-@keyframes like-sparks {
+@keyframes sparks-fade-in {
   from {
     opacity: 0;
   }

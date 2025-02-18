@@ -36,14 +36,12 @@
 }
 
 @media (max-width: 425px) {
-
   :root {
     --page-width: 100vw;
   }
 }
 
 @media (width < 375px) {
-  
   :root {
     --header-title-font-size: clamp(
       1.875rem,
