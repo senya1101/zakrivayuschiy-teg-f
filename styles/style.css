@@ -99,32 +99,30 @@
   object-position: right;
 }
 
-.filter-sepia {
-  filter: sepia(80%);
+
+.filter-blur-and-sepia {
+  filter: blur(0.2rem) sepia(80%);
 }
 
-.filter-blur {
-  filter: blur(0.2rem);
+.filter-opacity-and-grayscale {
+  filter: opacity(0.2) grayscale(1);
 }
 
-.filter-opacity {
-  filter: opacity(0.2);
+.filter-opacity-and-blur {
+  filter: opacity(0.2) blur(0.2rem) ;
 }
 
-.filter-brightness {
-  filter: brightness(10);
+.filter-brightness-and-grayscale {
+  filter: brightness(10) grayscale(1);
 }
 
-.filter-grayscale {
-  filter: grayscale(1);
+
+.filter-invert-and-saturate {
+  filter: invert(0.8) saturate(160%);
 }
 
-.filter-invert {
-  filter: invert(0.8);
-}
-
-.filter-hue-rotate {
-  filter: hue-rotate(30deg);
+.filter-hue-rotate-and-invert {
+  filter: hue-rotate(30deg) invert(0.8);
 }
 
 .filter-saturate {
@@ -155,7 +153,6 @@
 }
 
 .button {
-  background-color: transparent;
   border: 2px #000 solid;
   font-family: var(--accent-font), sans-serif;
   background-color: var(--main-bg-color);
