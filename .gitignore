@@ -10,7 +10,7 @@
 
 *.vsix
 
-node_modules/ .
+./node_modules/ .
 
 stylelint.config.js
 
